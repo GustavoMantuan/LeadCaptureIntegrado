@@ -1,0 +1,88 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroEventoFragment"
+    android:scrollbars="vertical"
+    android:isScrollContainer="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/nomeEvento"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:id="@+id/etnomeEvento"
+            android:layout_centerHorizontal="true"
+            ></EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dataEvento"
+        android:id="@+id/textView"
+        android:layout_below="@+id/etnomeEvento"
+        android:layout_alignLeft="@+id/etnomeEvento"
+        android:layout_alignStart="@+id/etnomeEvento"
+        android:layout_marginTop="5dp"
+        android:layout_alignRight="@+id/etnomeEvento"
+        android:layout_alignEnd="@+id/etnomeEvento"
+        />
+
+
+
+    <DatePicker
+        android:labelFor="@string/dataEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataEvento"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="5dp"
+        android:startYear="2015"
+        android:calendarViewShown="false"
+        android:layoutMode="clipBounds"
+        android:clickable="true"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastraEvento"
+        android:id="@+id/button2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/dataEvento"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@+id/dataEvento"
+        android:layout_alignStart="@+id/dataEvento"
+        android:layout_alignRight="@+id/dataEvento"
+        android:layout_alignEnd="@+id/dataEvento"
+         />
+
+
+
+</RelativeLayout>
+
+
+
+
+</FrameLayout>
+</ScrollView>

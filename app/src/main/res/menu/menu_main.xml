@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.MainActivity"
+
+    >
+
+
+    <item android:id="@+id/n1" android:title="@string/cadastraEvento"
+        android:orderInCategory="100" app:showAsAction="never" android:showAsAction="never" />
+
+    <item android:id="@+id/n2" android:title="@string/trocarEvento"
+        android:orderInCategory="200" app:showAsAction="never" android:showAsAction="never"/>
+
+    <item android:id="@+id/n3" android:title="@string/sair" android:orderInCategory="300"
+        app:showAsAction="never" android:showAsAction="never"   />
+</menu>

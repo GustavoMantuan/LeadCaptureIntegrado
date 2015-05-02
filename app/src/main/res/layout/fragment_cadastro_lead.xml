@@ -1,0 +1,261 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroLeadFragment">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right|bottom"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/informacoesPessoais"
+            android:id="@+id/textView5"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/nomeLead"
+            android:ems="10"
+            android:maxLength="50"
+            android:id="@+id/etNomeLead"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textView5"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_alignRight="@+id/textView5"
+            android:layout_alignEnd="@+id/textView5"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:hint="@string/emailLead"
+            android:id="@+id/etEmailLead"
+            android:layout_below="@+id/etNomeLead"
+            android:layout_alignLeft="@+id/etNomeLead"
+            android:layout_alignStart="@+id/etNomeLead"
+            android:layout_alignRight="@+id/etNomeLead"
+            android:layout_alignEnd="@+id/etNomeLead" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/foneResLead"
+            android:id="@+id/textView2"
+            android:layout_alignBottom="@+id/etFoneRes"
+            android:layout_alignLeft="@+id/etEmailLead"
+            android:layout_alignStart="@+id/etEmailLead" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/etFoneRes"
+            android:layout_below="@+id/etEmailLead"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_alignRight="@+id/etEmailLead"
+            android:layout_alignEnd="@+id/etEmailLead" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/foneCelLead"
+            android:id="@+id/tvFoneCel"
+            android:layout_alignBottom="@+id/etFoneCel"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/etFoneCel"
+            android:layout_below="@+id/etFoneRes"
+            android:layout_toRightOf="@+id/tvFoneCel"
+            android:layout_alignRight="@+id/etFoneRes"
+            android:layout_alignEnd="@+id/etFoneRes" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/dataLead"
+            android:id="@+id/textView4"
+            android:layout_alignBottom="@+id/dataNascimento"
+            android:layout_alignLeft="@+id/tvFoneCel"
+            android:layout_alignStart="@+id/tvFoneCel" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/dataNascimento"
+            android:layout_below="@+id/etFoneCel"
+            android:layout_alignRight="@+id/etFoneCel"
+            android:layout_alignEnd="@+id/etFoneCel"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4" />
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spCidade"
+            android:layout_below="@+id/textView6"
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_alignRight="@+id/etFoneCel"
+            android:layout_alignEnd="@+id/etFoneCel" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/informacoesEndereco"
+            android:id="@+id/textView6"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_alignRight="@+id/etFoneCel"
+            android:layout_alignEnd="@+id/etFoneCel" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/enderecoLead"
+            android:ems="10"
+            android:id="@+id/etEndereco"
+            android:layout_below="@+id/spCidade"
+            android:layout_alignLeft="@+id/spCidade"
+            android:layout_alignStart="@+id/spCidade"
+            android:layout_alignRight="@+id/spCidade"
+            android:layout_alignEnd="@+id/spCidade" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/nLead"
+            android:id="@+id/etNumero"
+            android:layout_below="@+id/etEndereco"
+            android:layout_alignLeft="@+id/etEndereco"
+            android:layout_alignStart="@+id/etEndereco"
+            android:layout_toStartOf="@+id/dataNascimento"
+            android:layout_toLeftOf="@+id/dataNascimento" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/bairroLead"
+            android:ems="10"
+            android:id="@+id/etBairro"
+            android:layout_alignTop="@+id/etNumero"
+            android:layout_alignRight="@+id/etEndereco"
+            android:layout_alignEnd="@+id/etEndereco"
+            android:layout_alignLeft="@+id/dataNascimento"
+            android:layout_alignStart="@+id/dataNascimento" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fiesQuestion"
+            android:id="@+id/cbFies"
+            android:layout_alignTop="@+id/cbProuni"
+            android:layout_alignLeft="@+id/etNumero"
+            android:layout_alignStart="@+id/etNumero" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prouni"
+            android:id="@+id/cbProuni"
+            android:layout_alignBottom="@+id/etProuniP"
+            android:layout_toRightOf="@+id/etNumero"
+            android:layout_toEndOf="@+id/etNumero" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:visibility="invisible"
+            android:id="@+id/etProuniP"
+            android:layout_below="@+id/etBairro"
+            android:layout_toRightOf="@+id/cbProuni"
+            android:layout_alignRight="@+id/etEndereco"
+            android:layout_alignEnd="@+id/etEndereco" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enem"
+            android:id="@+id/checkBox"
+            android:layout_alignBottom="@+id/edEnem"
+            android:layout_alignLeft="@+id/cbFies"
+            android:layout_alignStart="@+id/cbFies" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:visibility="invisible"
+            android:id="@+id/edEnem"
+            android:layout_below="@+id/etProuniP"
+            android:layout_toRightOf="@+id/checkBox"
+            android:layout_alignRight="@+id/etProuniP"
+            android:layout_alignEnd="@+id/etProuniP" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spCurso1"
+            android:layout_below="@+id/checkBox"
+            android:layout_alignRight="@+id/edEnem"
+            android:layout_alignEnd="@+id/edEnem"
+            android:layout_alignLeft="@+id/checkBox"
+            android:layout_alignStart="@+id/checkBox" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spCurso2"
+            android:layout_alignBottom="@+id/spCurso1"
+            android:layout_alignRight="@+id/spCurso1"
+            android:layout_alignEnd="@+id/spCurso1"
+            android:layout_alignLeft="@+id/spCurso1"
+            android:layout_alignStart="@+id/spCurso1" />
+
+
+    </RelativeLayout>
+</FrameLayout>
+    </ScrollView>
+
+

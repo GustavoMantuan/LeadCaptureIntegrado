@@ -1,0 +1,56 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroCidadeFragment">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/nomeCidade"
+            android:ems="10"
+            android:id="@+id/etnomeCidade"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/siglaEstado"
+            android:maxLength="2"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:id="@+id/etsiglaEstado"
+            android:layout_below="@+id/etnomeCidade"
+            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@+id/etnomeCidade"
+            android:layout_alignStart="@+id/etnomeCidade"
+            android:layout_alignRight="@+id/etnomeCidade"
+            android:layout_alignEnd="@+id/etnomeCidade"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastraCidade"
+            android:id="@+id/btnCadastraCidade"
+            android:layout_below="@+id/etsiglaEstado"
+            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@+id/etnomeCidade"
+            android:layout_alignStart="@+id/etnomeCidade"
+            android:layout_alignRight="@+id/etnomeCidade"
+            android:layout_alignEnd="@+id/etnomeCidade"
+            android:layout_marginTop="10dp"
+            android:onClick="cadastraCidade"
+            />
+    </RelativeLayout>
+</FrameLayout>

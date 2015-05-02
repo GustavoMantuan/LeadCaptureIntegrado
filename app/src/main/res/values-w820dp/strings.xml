@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nomeCidade">Cidade</string>
+    <string name="siglaEstado">UF</string>
+    <string name="cadastraCidade">Cadastrar</string>
+    <string name="nomeCurso">Nome do Curso</string>
+    <string name="aberto">Aberto</string>
+    <string name="menu1">Mudar Evento</string>
+    <string name="menu2">Cadastrar Evento</string>
+    <string name="menu3">Sair</string>
+    <string name="nomeEvento">Nome do Evento</string>
+    <string name="cadastraEvento">Cadastrar Evento</string>
+    <string name="trocarEvento">Trocar Evento</string>
+    <string name="sair">Sair</string>
+    <string name="dataEvento">Data do Evento</string>
+    <string name="nomePessoa">Nome do Futuro Aluno</string>
+    <string name="emailLead">email@example.com</string>
+    <string name="nomeLead">Nome do futuro aluno</string>
+    <string name="foneResLead">Telefone Residencial</string>
+    <string name="foneCelLead">Telefone Celular</string>
+    <string name="dataLead">Nascimento</string>
+    <string name="informacoesPessoais">Informações Pessoais</string>
+    <string name="enderecoLead">Endereço</string>
+    <string name="bairroLead">Bairro</string>
+    <string name="nLead">Nº</string>
+    <string name="informacoesEndereco">Endereço</string>
+    <string name="fiesQuestion">Fies ?</string>
+    <string name="prouni">Prouni ?</string>
+    <string name="enem">Enem ?</string>
+    <string name="cadastroSucesso">Cadastro Efetuado com Sucesso!</string>
+</resources>
