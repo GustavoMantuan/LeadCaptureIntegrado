@@ -8,7 +8,7 @@
     <FrameLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroEventoFragment"
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroEventoFragment_"
     android:scrollbars="vertical"
     android:isScrollContainer="true"
     >
@@ -22,14 +22,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
+            android:drawableLeft="@mipmap/ic_action_group"
+            android:drawableStart="@mipmap/ic_action_group"
             android:hint="@string/nomeEvento"
             android:layout_margin="10dp"
             android:ems="10"
             android:id="@+id/etnomeEvento"
             android:layout_centerHorizontal="true"
+            android:textColorHint="@color/cinzinha"
+            android:textColor="@color/azul_bem_escuro"
+            android:shadowColor="@color/azul_claro"
             ></EditText>
 
     <TextView
+        android:textColor="@color/azul_claro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/dataEvento"
@@ -63,11 +69,11 @@
 
         />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cadastraEvento"
-        android:id="@+id/button2"
+        android:id="@+id/btnCadastraEvento"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/dataEvento"
         android:layout_centerHorizontal="true"
@@ -75,9 +81,19 @@
         android:layout_alignStart="@+id/dataEvento"
         android:layout_alignRight="@+id/dataEvento"
         android:layout_alignEnd="@+id/dataEvento"
-         />
+        android:src="@mipmap/ic_action_new"
+        />
 
-
+        <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancelaEvento"
+        android:src="@mipmap/ic_action_cancel"
+        android:layout_below="@+id/btnCadastraEvento"
+        android:layout_alignRight="@+id/btnCadastraEvento"
+        android:layout_alignEnd="@+id/btnCadastraEvento"
+        android:layout_alignLeft="@+id/btnCadastraEvento"
+        android:layout_alignStart="@+id/btnCadastraEvento" />
 
 </RelativeLayout>
 

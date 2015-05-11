@@ -1,4 +1,3 @@
-
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,6 +17,7 @@
         >
 
         <TextView
+            android:textColor="@color/azul_claro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -30,6 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
+            android:drawableLeft="@mipmap/ic_action_person"
+            android:drawableStart="@mipmap/ic_action_person"
             android:hint="@string/nomeLead"
             android:ems="10"
             android:maxLength="50"
@@ -53,120 +55,87 @@
             android:layout_alignLeft="@+id/etNomeLead"
             android:layout_alignStart="@+id/etNomeLead"
             android:layout_alignRight="@+id/etNomeLead"
+            android:drawableStart="@mipmap/ic_action_email"
+            android:drawableLeft="@mipmap/ic_action_email"
             android:layout_alignEnd="@+id/etNomeLead" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/foneResLead"
-            android:id="@+id/textView2"
-            android:layout_alignBottom="@+id/etFoneRes"
-            android:layout_alignLeft="@+id/etEmailLead"
-            android:layout_alignStart="@+id/etEmailLead" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
+            android:drawableStart="@mipmap/ic_action_call"
+            android:drawableLeft="@mipmap/ic_action_call"
             android:id="@+id/etFoneRes"
             android:layout_below="@+id/etEmailLead"
-            android:layout_toRightOf="@+id/textView2"
             android:layout_alignRight="@+id/etEmailLead"
-            android:layout_alignEnd="@+id/etEmailLead" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/foneCelLead"
-            android:id="@+id/tvFoneCel"
-            android:layout_alignBottom="@+id/etFoneCel"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_alignStart="@+id/textView2" />
+            android:layout_alignEnd="@+id/etEmailLead"
+            android:layout_alignLeft="@+id/etEmailLead" />
 
         <EditText
+            android:drawableStart="@mipmap/ic_action_phone"
+            android:drawableLeft="@mipmap/ic_action_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
             android:id="@+id/etFoneCel"
             android:layout_below="@+id/etFoneRes"
-            android:layout_toRightOf="@+id/tvFoneCel"
+            android:layout_alignStart="@+id/etFoneRes"
+            android:layout_toRightOf="@+id/etFoneRes"
             android:layout_alignRight="@+id/etFoneRes"
+            android:layout_alignLeft="@+id/etFoneRes"
             android:layout_alignEnd="@+id/etFoneRes" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/dataLead"
-            android:id="@+id/textView4"
-            android:layout_alignBottom="@+id/dataNascimento"
-            android:layout_alignLeft="@+id/tvFoneCel"
-            android:layout_alignStart="@+id/tvFoneCel" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
+            android:drawableStart="@mipmap/ic_action_go_to_today"
+            android:drawableLeft="@mipmap/ic_action_go_to_today"
             android:id="@+id/dataNascimento"
             android:layout_below="@+id/etFoneCel"
+            android:layout_alignLeft="@+id/etFoneCel"
+            android:layout_alignStart="@+id/etFoneCel"
             android:layout_alignRight="@+id/etFoneCel"
-            android:layout_alignEnd="@+id/etFoneCel"
-            android:layout_toRightOf="@+id/textView4"
-            android:layout_toEndOf="@+id/textView4" />
-
+            android:layout_alignEnd="@+id/etFoneCel" />
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:scrollbarStyle="outsideInset"
             android:id="@+id/spCidade"
-            android:layout_below="@+id/textView6"
-            android:layout_alignLeft="@+id/textView6"
-            android:layout_alignStart="@+id/textView6"
-            android:layout_alignRight="@+id/etFoneCel"
-            android:layout_alignEnd="@+id/etFoneCel" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/informacoesEndereco"
-            android:id="@+id/textView6"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/textView4"
-            android:layout_alignLeft="@+id/textView4"
-            android:layout_alignStart="@+id/textView4"
-            android:layout_alignRight="@+id/etFoneCel"
-            android:layout_alignEnd="@+id/etFoneCel" />
+            android:layout_below="@+id/dataNascimento"
+            android:layout_alignRight="@+id/dataNascimento"
+            android:layout_alignEnd="@+id/dataNascimento"
+            android:layout_alignLeft="@+id/dataNascimento"
+            android:layout_alignStart="@+id/dataNascimento"
+            android:spinnerMode="dialog" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="textShortMessage"
             android:hint="@string/enderecoLead"
             android:ems="10"
             android:id="@+id/etEndereco"
             android:layout_below="@+id/spCidade"
-            android:layout_alignLeft="@+id/spCidade"
-            android:layout_alignStart="@+id/spCidade"
-            android:layout_alignRight="@+id/spCidade"
-            android:layout_alignEnd="@+id/spCidade" />
+            android:layout_alignLeft="@+id/etFoneCel"
+            android:layout_alignStart="@+id/etFoneCel"
+            android:layout_alignRight="@+id/etFoneCel"
+            android:layout_alignEnd="@+id/etFoneCel" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:inputType="textShortMessage"
             android:hint="@string/nLead"
             android:id="@+id/etNumero"
             android:layout_below="@+id/etEndereco"
             android:layout_alignLeft="@+id/etEndereco"
             android:layout_alignStart="@+id/etEndereco"
-            android:layout_toStartOf="@+id/dataNascimento"
-            android:layout_toLeftOf="@+id/dataNascimento" />
+            android:layout_toStartOf="@+id/etBairro" />
 
 
         <EditText
@@ -176,29 +145,28 @@
             android:hint="@string/bairroLead"
             android:ems="10"
             android:id="@+id/etBairro"
-            android:layout_alignTop="@+id/etNumero"
+            android:layout_below="@+id/etEndereco"
             android:layout_alignRight="@+id/etEndereco"
-            android:layout_alignEnd="@+id/etEndereco"
-            android:layout_alignLeft="@+id/dataNascimento"
-            android:layout_alignStart="@+id/dataNascimento" />
+            android:layout_alignEnd="@+id/etEndereco" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fiesQuestion"
             android:id="@+id/cbFies"
-            android:layout_alignTop="@+id/cbProuni"
-            android:layout_alignLeft="@+id/etNumero"
-            android:layout_alignStart="@+id/etNumero" />
+            android:layout_below="@+id/cbProuni"
+            android:layout_alignLeft="@+id/cbProuni"
+            android:layout_alignStart="@+id/cbProuni" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/prouni"
             android:id="@+id/cbProuni"
+            android:checked="false"
             android:layout_alignBottom="@+id/etProuniP"
-            android:layout_toRightOf="@+id/etNumero"
-            android:layout_toEndOf="@+id/etNumero" />
+            android:layout_alignLeft="@+id/etNumero"
+            android:layout_alignStart="@+id/etNumero" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -217,9 +185,9 @@
             android:layout_height="wrap_content"
             android:text="@string/enem"
             android:id="@+id/checkBox"
-            android:layout_alignBottom="@+id/edEnem"
-            android:layout_alignLeft="@+id/cbFies"
-            android:layout_alignStart="@+id/cbFies" />
+            android:layout_below="@+id/cbFies"
+            android:layout_alignLeft="@+id/cbProuni"
+            android:layout_alignStart="@+id/cbProuni" />
 
         <EditText
             android:layout_width="wrap_content"

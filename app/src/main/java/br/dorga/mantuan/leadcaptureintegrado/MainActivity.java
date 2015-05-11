@@ -4,19 +4,11 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.net.http.SslCertificate;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
-import br.dorga.mantuan.leadcaptureintegrado.br.dorga.mantuan.model.ConectaBanco;
 
 
 public class MainActivity extends FragmentActivity {
@@ -29,7 +21,8 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         ActionBar ab = getActionBar();
         ab.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_style));
         ActionBar.Tab tab3 = ab.newTab();
         tab3.setText("Lead");
         // tab2.setIcon(R.drawable.ic_action_new);
@@ -39,13 +32,13 @@ public class MainActivity extends FragmentActivity {
         ActionBar.Tab tab1 = ab.newTab();
         tab1.setText("Cidade");
         // tab1.setIcon(R.mipmap.ic_action_new);
-        tab1.setTabListener(new NavegacaoTabs(new CadastroCidadeFragment()));
+        tab1.setTabListener(new NavegacaoTabs(new CadastroCidadeFragment_()));
         ab.addTab(tab1, false);
 
         ActionBar.Tab tab2 = ab.newTab();
         tab2.setText("Curso");
         // tab2.setIcon(R.drawable.ic_action_new);
-        tab2.setTabListener(new NavegacaoTabs(new CadastroCursoFragment()));
+        tab2.setTabListener(new NavegacaoTabs(new CadastroCursoFragment_()));
         ab.addTab(tab2, false);
 
 
@@ -113,14 +106,12 @@ public class MainActivity extends FragmentActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.n1) {
-
             FragmentTransaction fts = fm.beginTransaction();
             fts.remove(fm.findFragmentByTag("frag1"));
-            Fragment evento = new CadastroEventoFragment();
+            Fragment evento = new CadastroEventoFragment_();
             fts.replace(R.id.fragmentContainer,evento,"frag1");
             fts.addToBackStack("pilha");
             fts.commit();
-
         }
 
         return super.onOptionsItemSelected(item);

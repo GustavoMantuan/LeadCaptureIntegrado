@@ -8,6 +8,16 @@ public class Curso {
     private String nome;
     private int aberto;
 
+    public int getAberto() {
+        return aberto;
+    }
+
+    public void setAberto(int aberto) {
+        this.aberto = aberto;
+    }
+
+
+
     public Curso(long _id, String nome, int aberto) {
         this._id = _id;
         this.nome = nome;
@@ -35,11 +45,4 @@ public class Curso {
         this.nome = nome;
     }
 
-    public int isAberto() {
-        return aberto;
-    }
-
-    public void setAberto(int aberto) {
-        this.aberto = aberto;
-    }
 }

@@ -34,5 +34,11 @@
     <string name="prouni">Prouni ?</string>
     <string name="enem">Enem ?</string>
     <string name="cadastroSucesso">Cadastro Efetuado com Sucesso!</string>
+    <string name="cadastroErro">Registro Não Inserido!</string>
+    <string name="faltaCampos">Preencha todos os campos!</string>
+    <string name="adiciona">adiciona</string>
+    <string name="title_activity_seleciona_curso">Selecione o Curso Para Capturarmos as Leads!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

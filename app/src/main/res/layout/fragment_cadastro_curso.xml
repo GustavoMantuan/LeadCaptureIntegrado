@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroCursoFragment">
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroCursoFragment_">
 
 
     <RelativeLayout
@@ -20,22 +20,29 @@
             android:id="@+id/etnomeCurso"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColorHint="@color/cinzinha"
+            android:textColor="@color/azul_bem_escuro"
+            android:shadowColor="@color/azul_claro"
+            />
 
         <Switch
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textOff="Fechado"
             android:textOn="Aberto"
             android:id="@+id/aberto"
             android:layout_marginTop="10dp"
+            android:text="Disponibilidade:"
+            android:textColor="@color/azul_claro"
             android:layout_below="@+id/etnomeCurso"
             android:layout_alignLeft="@+id/etnomeCurso"
             android:layout_alignStart="@+id/etnomeCurso"
             android:layout_alignRight="@+id/etnomeCurso"
-            android:layout_alignEnd="@+id/etnomeCurso" />
+            android:layout_alignEnd="@+id/etnomeCurso"
+         />
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cadastraCurso"
@@ -47,8 +54,20 @@
             android:layout_alignStart="@+id/aberto"
             android:layout_alignRight="@+id/aberto"
             android:layout_alignEnd="@+id/aberto"
-
+            android:onClick="btnCadastraCurso"
+            android:src="@mipmap/ic_action_new"
             />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelaCurso"
+            android:src="@mipmap/ic_action_cancel"
+            android:layout_below="@+id/btnCadastraCurso"
+            android:layout_alignRight="@+id/btnCadastraCurso"
+            android:layout_alignEnd="@+id/btnCadastraCurso"
+            android:layout_alignLeft="@+id/btnCadastraCurso"
+            android:layout_alignStart="@+id/btnCadastraCurso" />
 
     </RelativeLayout>
 </FrameLayout>

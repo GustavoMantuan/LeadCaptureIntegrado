@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroCidadeFragment">
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroCidadeFragment_">
 
 
     <RelativeLayout
@@ -15,8 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
+            android:drawableLeft="@mipmap/ic_action_location_found"
+            android:drawableStart="@mipmap/ic_action_location_found"
             android:hint="@string/nomeCidade"
             android:ems="10"
+            android:textColor="@color/azul_bem_escuro"
+            android:textColorHint="@color/cinzinha"
+            android:shadowColor="@color/azul_claro"
             android:id="@+id/etnomeCidade"
             android:layout_centerHorizontal="true"
             android:layout_margin="10dp" />
@@ -30,6 +35,10 @@
             android:ems="10"
             android:layout_marginTop="10dp"
             android:id="@+id/etsiglaEstado"
+            android:textColor="@color/azul_bem_escuro"
+            android:textColorHint="@color/cinzinha"
+            android:shadowColor="@color/azul_claro"
+            android:textAllCaps="true"
             android:layout_below="@+id/etnomeCidade"
             android:layout_centerHorizontal="true"
             android:layout_alignLeft="@+id/etnomeCidade"
@@ -38,7 +47,7 @@
             android:layout_alignEnd="@+id/etnomeCidade"
             />
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cadastraCidade"
@@ -50,7 +59,21 @@
             android:layout_alignRight="@+id/etnomeCidade"
             android:layout_alignEnd="@+id/etnomeCidade"
             android:layout_marginTop="10dp"
-            android:onClick="cadastraCidade"
+            android:clickable="true"
+            android:src="@mipmap/ic_action_new"
+            android:contentDescription="@string/adiciona"
             />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelaCidade"
+            android:src="@mipmap/ic_action_cancel"
+            android:layout_alignLeft="@+id/btnCadastraCidade"
+            android:layout_alignStart="@+id/btnCadastraCidade"
+            android:layout_alignRight="@+id/btnCadastraCidade"
+            android:layout_alignEnd="@+id/btnCadastraCidade"
+            android:layout_below="@+id/btnCadastraCidade" />
+        />
     </RelativeLayout>
 </FrameLayout>
