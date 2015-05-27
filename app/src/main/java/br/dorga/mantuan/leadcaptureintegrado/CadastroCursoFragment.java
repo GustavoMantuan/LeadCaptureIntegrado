@@ -5,10 +5,12 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
@@ -24,33 +26,69 @@ public class CadastroCursoFragment extends Fragment {
     EditText etnomeCurso;
     @ViewById(R.id.aberto)
     Switch aberto;
+    @ViewById
+    Button btnCadastraCurso;
+    @ViewById
+    Button btnCancelaCurso;
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cadastro_curso, container, false);
+    private Curso curso;
+    private CursoDAO dao = new CursoDAO();
+    int escolha = 0;
+
+    @AfterViews
+    public void preenche(){
+        try{
+            curso = (Curso) getArguments().getSerializable("curso");
+            etnomeCurso.setText(curso.getNome());
+            btnCadastraCurso.setText("Alterar");
+            btnCancelaCurso.setText("Excluir");
+            if (curso.getAberto() != 0){
+                aberto.setChecked(true);
+            }else {
+                aberto.setChecked(false);
+            }
+        }catch (Exception e){
+            btnCadastraCurso.setText("Cadastrar");
+            btnCancelaCurso.setText("Limpar");
+            e.printStackTrace();
+        }
     }
 
-
-    @Click(R.id.btnCadastraCurso)
-    void btnCadastraCurso(){
-        if (etnomeCurso.getText().toString() != null && !"".equals(etnomeCurso.getText().toString())){
-            int escolha = 0;
-            if (aberto.isChecked()){
+    @Click
+    void btnCadastraCurso() {
+        if ("".equals(etnomeCurso.getText().toString())) {
+            Toast.makeText(getActivity(), R.string.faltaCampos, Toast.LENGTH_SHORT).show();
+        }else {
+            if (aberto.isChecked()) {
                 escolha = 1;
             }
-            Curso c = new Curso(etnomeCurso.getText().toString(),escolha);
-            CursoDAO cid = new CursoDAO();
-            Mensagens.msgBanco(cid.save(c), this.getActivity().getApplication().getApplicationContext());
-        }else {
-            Toast.makeText(getActivity(),R.string.faltaCampos,Toast.LENGTH_SHORT).show();
+            if (curso == null) {
+                curso = new Curso(etnomeCurso.getText().toString(), escolha);
+                Mensagens.msgBanco(dao.save(curso), this.getActivity().getApplication().getApplicationContext());
+                curso = null;
+                btnCancelaCurso();
+            } else {
+                curso.setAberto(escolha);
+                curso.setNome(etnomeCurso.getText().toString());
+                Mensagens.msgBanco(dao.update(curso), this.getActivity().getApplication().getApplicationContext());
+                curso = null;
+                btnCancelaCurso();
+            }
+
         }
     }
 
     @Click
     void btnCancelaCurso(){
-        etnomeCurso.setText("");
-        aberto.setChecked(false);
+        if (curso == null) {
+            etnomeCurso.setText("");
+            aberto.setChecked(false);
+            btnCadastraCurso.setText("Cadastrar");
+            btnCancelaCurso.setText("Limpar");
+        } else {
+            Mensagens.msgExclusao(dao.delete(curso),this.getActivity().getApplication().getApplicationContext());
+            curso = null;
+            btnCancelaCurso();
+        }
     }
 }

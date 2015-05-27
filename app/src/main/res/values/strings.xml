@@ -16,7 +16,10 @@
     <string name="menu3">Sair</string>
     <string name="nomeEvento">Nome do Evento</string>
     <string name="cadastraEvento">Cadastrar Evento</string>
-    <string name="trocarEvento">Trocar Evento</string>
+    <string name="trocarEvento">Listar Eventos</string>
+    <string name="listarCidades">Listar Cidades</string>
+    <string name="listarCursos">Listar Cursos</string>
+    <string name="listarLeads">Listar Leads</string>
     <string name="sair">Sair</string>
     <string name="dataEvento">Data do Evento</string>
     <string name="nomePessoa">Nome do Futuro Aluno</string>
@@ -37,8 +40,24 @@
     <string name="cadastroErro">Registro Não Inserido!</string>
     <string name="faltaCampos">Preencha todos os campos!</string>
     <string name="adiciona">adiciona</string>
-    <string name="title_activity_seleciona_curso">Selecione o Curso Para Capturarmos as Leads!</string>
+    <string name="title_activity_seleciona_curso">Selecione o Evento Para Capturarmos as Leads!</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="evento_escolhido">0</string>
+    <string name="selecione_evento">Selecione um evento para começar a captura de Leads!</string>
+    <string name="evento_selecionado">Evento Selecionado!</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login_n">Usuário</string>
+    <string name="senha_n">Senha</string>
+    <string name="logar">Logar</string>
+    <string name="erro_logar">Falha no login!</string>
+    <string name="title_activity_lista_cidades">ListaCidades</string>
+    <string name="seleciona_cidade">Selecione a Cidade</string>
+    <string name="erro_exclusao">Registro não excluído!</string>
+    <string name="exclusao">Registro Excluído!</string>
+    <string name="title_activity_lista_cursos">ListaCursos</string>
+    <string name="seleciona_curso">Selecione o Curso</string>
+    <string name="title_activity_lista_leads">ListaLeads</string>
+    <string name="seleciona_leads">Selecione a Lead</string>
 
 </resources>

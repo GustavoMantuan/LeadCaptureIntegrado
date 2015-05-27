@@ -1,11 +1,12 @@
 package br.dorga.mantuan.leadcaptureintegrado.br.dorga.mantuan.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Dorga on 28/04/2015.
  */
-public class Evento {
+public class Evento implements Serializable {
     private long _id;
     private String nome;
     private Date data;
@@ -19,6 +20,9 @@ public class Evento {
     public Evento(String nome, Date data) {
         this.nome = nome;
         this.data = data;
+    }
+
+    public Evento() {
     }
 
     public long get_id() {

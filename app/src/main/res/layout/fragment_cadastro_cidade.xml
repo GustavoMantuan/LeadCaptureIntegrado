@@ -47,10 +47,9 @@
             android:layout_alignEnd="@+id/etnomeCidade"
             />
 
-        <ImageButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cadastraCidade"
             android:id="@+id/btnCadastraCidade"
             android:layout_below="@+id/etsiglaEstado"
             android:layout_centerHorizontal="true"
@@ -60,15 +59,12 @@
             android:layout_alignEnd="@+id/etnomeCidade"
             android:layout_marginTop="10dp"
             android:clickable="true"
-            android:src="@mipmap/ic_action_new"
-            android:contentDescription="@string/adiciona"
             />
 
-        <ImageButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnCancelaCidade"
-            android:src="@mipmap/ic_action_cancel"
             android:layout_alignLeft="@+id/btnCadastraCidade"
             android:layout_alignStart="@+id/btnCadastraCidade"
             android:layout_alignRight="@+id/btnCadastraCidade"

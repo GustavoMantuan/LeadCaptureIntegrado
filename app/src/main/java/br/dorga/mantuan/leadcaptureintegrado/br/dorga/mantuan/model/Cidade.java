@@ -1,9 +1,11 @@
 package br.dorga.mantuan.leadcaptureintegrado.br.dorga.mantuan.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Dorga on 28/04/2015.
  */
-public class Cidade {
+public class Cidade implements Serializable {
     private long _id;
     private String nome;
     private String estado;
@@ -17,6 +19,9 @@ public class Cidade {
     public Cidade(String nome, String estado) {
         this.nome = nome;
         this.estado = estado;
+    }
+
+    public Cidade() {
     }
 
     public long get_id() {

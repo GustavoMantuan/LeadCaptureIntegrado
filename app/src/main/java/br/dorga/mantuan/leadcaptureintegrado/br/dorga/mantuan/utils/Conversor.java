@@ -16,5 +16,13 @@ public class Conversor {
             return "";
         }
     }
+    public static Date stringParaDate(String data) {
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+            return format.parse(data);
+        } catch (Exception ex) {
+            return null;
+        }
+    }
 }
 

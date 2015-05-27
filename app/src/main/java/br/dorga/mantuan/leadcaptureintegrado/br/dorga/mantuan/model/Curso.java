@@ -1,11 +1,17 @@
 package br.dorga.mantuan.leadcaptureintegrado.br.dorga.mantuan.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Dorga on 28/04/2015.
  */
-public class Curso {
+public class Curso implements Serializable {
     private long _id;
     private String nome;
+
+    public Curso() {
+    }
+
     private int aberto;
 
     public int getAberto() {

@@ -2,17 +2,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
     android:fillViewport="true">
 
 <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroLeadFragment">
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"
         >
 
@@ -62,15 +63,29 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/etFacebook"
+            android:layout_below="@+id/etEmailLead"
+            android:layout_alignLeft="@+id/etEmailLead"
+            android:layout_alignStart="@+id/etEmailLead"
+            android:layout_alignRight="@+id/etEmailLead"
+            android:drawableStart="@mipmap/ic_action_facebook"
+            android:drawableLeft="@mipmap/ic_action_facebook"
+            android:layout_alignEnd="@+id/etEmailLead" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
+            android:id="@+id/etFoneRes"
             android:drawableStart="@mipmap/ic_action_call"
             android:drawableLeft="@mipmap/ic_action_call"
-            android:id="@+id/etFoneRes"
-            android:layout_below="@+id/etEmailLead"
-            android:layout_alignRight="@+id/etEmailLead"
-            android:layout_alignEnd="@+id/etEmailLead"
-            android:layout_alignLeft="@+id/etEmailLead" />
+            android:layout_below="@+id/etFacebook"
+            android:layout_alignRight="@+id/etFacebook"
+            android:layout_alignEnd="@+id/etFacebook"
+            android:layout_alignLeft="@+id/etFacebook" />
 
         <EditText
             android:drawableStart="@mipmap/ic_action_phone"
@@ -99,7 +114,11 @@
             android:layout_alignLeft="@+id/etFoneCel"
             android:layout_alignStart="@+id/etFoneCel"
             android:layout_alignRight="@+id/etFoneCel"
-            android:layout_alignEnd="@+id/etFoneCel" />
+            android:layout_alignEnd="@+id/etFoneCel"
+            android:spinnersShown="true"
+            android:startYear="2015"
+            android:clickable="true"
+            android:calendarViewShown="false" />
 
         <Spinner
             android:layout_width="wrap_content"
@@ -111,7 +130,9 @@
             android:layout_alignEnd="@+id/dataNascimento"
             android:layout_alignLeft="@+id/dataNascimento"
             android:layout_alignStart="@+id/dataNascimento"
-            android:spinnerMode="dialog" />
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+
+            />
 
         <EditText
             android:layout_width="wrap_content"
@@ -166,7 +187,8 @@
             android:checked="false"
             android:layout_alignBottom="@+id/etProuniP"
             android:layout_alignLeft="@+id/etNumero"
-            android:layout_alignStart="@+id/etNumero" />
+            android:layout_alignStart="@+id/etNumero"
+            />
 
         <EditText
             android:layout_width="wrap_content"
@@ -184,7 +206,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/enem"
-            android:id="@+id/checkBox"
+            android:id="@+id/cbEnem"
             android:layout_below="@+id/cbFies"
             android:layout_alignLeft="@+id/cbProuni"
             android:layout_alignStart="@+id/cbProuni" />
@@ -196,8 +218,8 @@
             android:ems="10"
             android:visibility="invisible"
             android:id="@+id/edEnem"
-            android:layout_below="@+id/etProuniP"
-            android:layout_toRightOf="@+id/checkBox"
+            android:layout_above="@+id/spCurso1"
+            android:layout_toRightOf="@+id/cbProuni"
             android:layout_alignRight="@+id/etProuniP"
             android:layout_alignEnd="@+id/etProuniP" />
 
@@ -205,21 +227,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/spCurso1"
-            android:layout_below="@+id/checkBox"
+            android:layout_below="@+id/cbEnem"
             android:layout_alignRight="@+id/edEnem"
             android:layout_alignEnd="@+id/edEnem"
-            android:layout_alignLeft="@+id/checkBox"
-            android:layout_alignStart="@+id/checkBox" />
+            android:layout_alignLeft="@+id/cbEnem"
+            android:layout_alignStart="@+id/cbEnem" />
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/spCurso2"
-            android:layout_alignBottom="@+id/spCurso1"
+            android:layout_below="@+id/spCurso1"
+            android:layout_alignRight="@+id/edEnem"
+            android:layout_alignEnd="@+id/edEnem"
+            android:layout_alignLeft="@+id/cbEnem"
+            android:layout_alignStart="@+id/cbEnem" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCadastraLead"
+            android:layout_below="@+id/spCurso2"
             android:layout_alignRight="@+id/spCurso1"
             android:layout_alignEnd="@+id/spCurso1"
             android:layout_alignLeft="@+id/spCurso1"
             android:layout_alignStart="@+id/spCurso1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelaLead"
+            android:layout_below="@id/btnCadastraLead"
+            android:layout_alignRight="@+id/spCurso1"
+            android:layout_alignEnd="@+id/spCurso1"
+            android:layout_alignLeft="@+id/spCurso1"
+            android:layout_alignStart="@+id/spCurso1"
+            android:layout_marginBottom="10dp"/>
 
 
     </RelativeLayout>

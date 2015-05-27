@@ -31,7 +31,6 @@
             android:layout_centerHorizontal="true"
             android:textColorHint="@color/cinzinha"
             android:textColor="@color/azul_bem_escuro"
-            android:shadowColor="@color/azul_claro"
             ></EditText>
 
     <TextView
@@ -69,32 +68,28 @@
 
         />
 
-    <ImageButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cadastraEvento"
         android:id="@+id/btnCadastraEvento"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/dataEvento"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@+id/dataEvento"
-        android:layout_alignStart="@+id/dataEvento"
         android:layout_alignRight="@+id/dataEvento"
         android:layout_alignEnd="@+id/dataEvento"
-        android:src="@mipmap/ic_action_new"
-        />
+        android:layout_alignLeft="@+id/dataEvento"
+        android:layout_alignStart="@+id/dataEvento"
+         />
 
-        <ImageButton
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnCancelaEvento"
-        android:src="@mipmap/ic_action_cancel"
         android:layout_below="@+id/btnCadastraEvento"
+        android:layout_alignLeft="@+id/btnCadastraEvento"
+        android:layout_alignStart="@+id/btnCadastraEvento"
         android:layout_alignRight="@+id/btnCadastraEvento"
         android:layout_alignEnd="@+id/btnCadastraEvento"
-        android:layout_alignLeft="@+id/btnCadastraEvento"
-        android:layout_alignStart="@+id/btnCadastraEvento" />
-
+        />
 </RelativeLayout>
 
 

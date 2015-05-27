@@ -1,11 +1,12 @@
 package br.dorga.mantuan.leadcaptureintegrado.br.dorga.mantuan.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Dorga on 28/04/2015.
  */
-public class Lead {
+public class Lead implements Serializable{
     private long _id;
     private String nome;
     private String email;
@@ -17,18 +18,17 @@ public class Lead {
     private String numero;
     private String bairro;
     private String facebook;
-    private int cidade;
-    private int evento;
+    private Long cidade;
+    private Long evento;
     private int fies; // 0 para Nao 1 para Sim
-    private int prouni;
+    private int prouni; // 0 para Nao 1 para Sim
     private Double percProuni; // 50% 100%;
     private int enem; //0 para nao 1 para sim
-    private int curso1;
-    private int curso2;
+    private Long curso1;
+    private Long curso2;
     private Double notaEnem;
 
-
-    public Lead(long _id, String nome, String email, String telefoneRes, String telefoneCes, Date nascimento, Date dataLead, String endereco, String numero, String bairro, String facebook, int cidade, int evento, int fies, int prouni, Double percProuni, int enem, int curso1, int curso2, Double notaEnem) {
+    public Lead(long _id, String nome, String email, String telefoneRes, String telefoneCes, Date nascimento, Date dataLead, String endereco, String numero, String bairro, String facebook, Long cidade, Long evento, int fies, int prouni, Double percProuni, int enem, Long curso1, Long curso2, Double notaEnem) {
         this._id = _id;
         this.nome = nome;
         this.email = email;
@@ -50,6 +50,29 @@ public class Lead {
         this.curso2 = curso2;
         this.notaEnem = notaEnem;
     }
+
+    public Lead(String nome, String email, String telefoneRes, String telefoneCes, Date nascimento, Date dataLead, String endereco, String numero, String bairro, String facebook, Long cidade, Long evento, int fies, int prouni, Double percProuni, int enem, Long curso1, Long curso2, Double notaEnem) {
+        this.nome = nome;
+        this.email = email;
+        this.telefoneRes = telefoneRes;
+        this.telefoneCes = telefoneCes;
+        this.nascimento = nascimento;
+        this.dataLead = dataLead;
+        this.endereco = endereco;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.facebook = facebook;
+        this.cidade = cidade;
+        this.evento = evento;
+        this.fies = fies;
+        this.prouni = prouni;
+        this.percProuni = percProuni;
+        this.enem = enem;
+        this.curso1 = curso1;
+        this.curso2 = curso2;
+        this.notaEnem = notaEnem;
+    }
+
 
     public long get_id() {
         return _id;
@@ -139,19 +162,19 @@ public class Lead {
         this.facebook = facebook;
     }
 
-    public int getCidade() {
+    public Long getCidade() {
         return cidade;
     }
 
-    public void setCidade(int cidade) {
+    public void setCidade(Long cidade) {
         this.cidade = cidade;
     }
 
-    public int getEvento() {
+    public Long getEvento() {
         return evento;
     }
 
-    public void setEvento(int evento) {
+    public void setEvento(Long evento) {
         this.evento = evento;
     }
 
@@ -187,19 +210,19 @@ public class Lead {
         this.enem = enem;
     }
 
-    public int getCurso1() {
+    public Long getCurso1() {
         return curso1;
     }
 
-    public void setCurso1(int curso1) {
+    public void setCurso1(Long curso1) {
         this.curso1 = curso1;
     }
 
-    public int getCurso2() {
+    public Long getCurso2() {
         return curso2;
     }
 
-    public void setCurso2(int curso2) {
+    public void setCurso2(Long curso2) {
         this.curso2 = curso2;
     }
 

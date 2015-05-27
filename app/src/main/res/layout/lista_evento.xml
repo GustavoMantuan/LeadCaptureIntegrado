@@ -9,29 +9,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_margin="10dp"
-        android:id="@+id/nomeEvento"
+        android:textAlignment="center"
+        android:textColor="@color/branco"
+        android:id="@+id/p1"
+        android:gravity="center_horizontal"
+        android:layout_margin="4dp"
         android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/p2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_margin="3dp"
+        android:textColor="@color/branco"
+        android:gravity="left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/p2"
+        android:layout_below="@+id/p1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/idEvento"
-        android:layout_below="@+id/nomeEvento"
-        android:layout_alignLeft="@+id/nomeEvento"
-        android:layout_alignStart="@+id/nomeEvento" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/dtEvento"
-        android:layout_alignBottom="@+id/idEvento"
-        android:layout_alignRight="@+id/nomeEvento"
-        android:layout_alignEnd="@+id/nomeEvento" />
 </RelativeLayout>

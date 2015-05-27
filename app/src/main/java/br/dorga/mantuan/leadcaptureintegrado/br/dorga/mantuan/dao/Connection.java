@@ -1,12 +1,12 @@
 package br.dorga.mantuan.leadcaptureintegrado.br.dorga.mantuan.dao;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Environment;
-import android.util.Log;
 
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Environment;
 import java.io.File;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Dorga on 28/04/2015.
@@ -32,7 +32,9 @@ public abstract class Connection<T> implements DAO<T> {
         }catch (Exception e){
             e.printStackTrace();
         }
+
     }
+
 
 
 }

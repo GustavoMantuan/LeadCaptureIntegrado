@@ -30,4 +30,12 @@
     <string name="cadastroSucesso">Cadastro Efetuado com Sucesso!</string>
     <string name="cadastroErro">Registro Não Inserido!</string>
     <string name="faltaCampos">Preencha todos os campos\"</string>
+    <string name="selecione_evento">Selecione um evento para começar a captura de Leads!</string>
+    <string name="evento_selecionado">Evento Selecionado!</string>
+    <string name="login_n">Usuário</string>
+    <string name="senha_n">Senha</string>
+    <string name="logar">Logar</string>
+    <string name="erro_logar">Falha no login!</string>
+    <string name="seleciona_cidade">Selecione a Cidade</string>
+    <string name="seleciona_leads">Selecione a Lead</string>
 </resources>

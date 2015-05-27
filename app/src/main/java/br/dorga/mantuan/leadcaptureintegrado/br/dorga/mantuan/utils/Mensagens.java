@@ -16,5 +16,12 @@ public class Mensagens {
             Toast.makeText(x, R.string.cadastroErro,Toast.LENGTH_SHORT).show();
         }
     }
+    public static void msgExclusao(long r, Context x){
+        if (r != -1){
+            Toast.makeText(x,R.string.exclusao,Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(x,R.string.erro_exclusao,Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }

@@ -42,10 +42,9 @@
             android:layout_alignEnd="@+id/etnomeCurso"
          />
 
-        <ImageButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cadastraCurso"
             android:id="@+id/btnCadastraCurso"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/aberto"
@@ -54,15 +53,12 @@
             android:layout_alignStart="@+id/aberto"
             android:layout_alignRight="@+id/aberto"
             android:layout_alignEnd="@+id/aberto"
-            android:onClick="btnCadastraCurso"
-            android:src="@mipmap/ic_action_new"
-            />
+                      />
 
-        <ImageButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnCancelaCurso"
-            android:src="@mipmap/ic_action_cancel"
             android:layout_below="@+id/btnCadastraCurso"
             android:layout_alignRight="@+id/btnCadastraCurso"
             android:layout_alignEnd="@+id/btnCadastraCurso"

@@ -11,19 +11,32 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light" >
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity_"
             android:label="@string/title_activity_main" >
-
         </activity>
         <activity
-            android:name=".SelecionaCursoActivity_"
-            android:label="@string/title_activity_seleciona_curso" >
+            android:name=".LoginActivity_"
+            android:label="@string/title_activity_login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SelecionaEventoFragment_"
+            android:label="@string/selecione_evento" >
+        </activity>
+        <activity
+            android:name=".br.dorga.mantuan.ListaCidades_"
+            android:label="@string/title_activity_lista_cidades" >
+        </activity>
+        <activity
+            android:name=".br.dorga.mantuan.ListaCursos_"
+            android:label="@string/title_activity_lista_cursos" >
+        </activity>
+        <activity
+            android:name=".br.dorga.mantuan.ListaLeads_"
+            android:label="@string/title_activity_lista_leads" >
+        </activity>
     </application>
-
 </manifest>

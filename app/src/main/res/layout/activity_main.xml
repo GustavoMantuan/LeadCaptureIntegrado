@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="br.dorga.mantuan.leadcaptureintegrado.MainActivity">
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.MainActivity_">
 
   <LinearLayout
         android:id="@+id/fragmentContainer"
