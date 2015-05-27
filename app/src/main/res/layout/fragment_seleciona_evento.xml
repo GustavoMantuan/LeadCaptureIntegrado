@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_style"
+    tools:context="br.dorga.mantuan.leadcaptureintegrado.SelecionaCursoFragment_">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/title_activity_seleciona_curso"
+        android:textAlignment="center"
+        android:textColor="@color/branco"
+        android:gravity="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
