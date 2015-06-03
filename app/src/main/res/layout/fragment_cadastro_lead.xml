@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollbarAlwaysDrawVerticalTrack="true"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    >
 
-<FrameLayout
+   <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context="br.dorga.mantuan.leadcaptureintegrado.CadastroLeadFragment">

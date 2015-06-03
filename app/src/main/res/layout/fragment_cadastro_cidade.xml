@@ -1,4 +1,4 @@
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -26,19 +26,12 @@
             android:layout_centerHorizontal="true"
             android:layout_margin="10dp" />
 
-        <EditText
+        <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="@string/siglaEstado"
-            android:maxLength="2"
-            android:ems="10"
+            android:prompt="@string/siglaEstado"
             android:layout_marginTop="10dp"
             android:id="@+id/etsiglaEstado"
-            android:textColor="@color/azul_bem_escuro"
-            android:textColorHint="@color/cinzinha"
-            android:shadowColor="@color/azul_claro"
-            android:textAllCaps="true"
             android:layout_below="@+id/etnomeCidade"
             android:layout_centerHorizontal="true"
             android:layout_alignLeft="@+id/etnomeCidade"
@@ -72,4 +65,4 @@
             android:layout_below="@+id/btnCadastraCidade" />
         />
     </RelativeLayout>
-</FrameLayout>
+</RelativeLayout>

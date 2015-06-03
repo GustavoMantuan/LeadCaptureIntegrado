@@ -1,10 +1,6 @@
 package br.dorga.mantuan.leadcaptureintegrado;
 
-import android.os.Bundle;
-import android.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.support.v4.app.Fragment;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
@@ -38,7 +34,8 @@ public class CadastroCursoFragment extends Fragment {
     @AfterViews
     public void preenche(){
         try{
-            curso = (Curso) getArguments().getSerializable("curso");
+            MainActivity_ activity = (MainActivity_) getActivity();
+            curso = activity.retornaCurso();
             etnomeCurso.setText(curso.getNome());
             btnCadastraCurso.setText("Alterar");
             btnCancelaCurso.setText("Excluir");

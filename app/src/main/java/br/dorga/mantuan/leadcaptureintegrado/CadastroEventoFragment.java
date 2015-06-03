@@ -1,7 +1,7 @@
 package br.dorga.mantuan.leadcaptureintegrado;
 
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +39,8 @@ public class CadastroEventoFragment extends Fragment {
     @AfterViews
     public void preenche(){
         try {
-            evento = (Evento) getArguments().getSerializable("evento_");
+            MainActivity_ activity = (MainActivity_) getActivity();
+            evento = activity.retornaEvento();
             etnomeEvento.setText(evento.getNome());
             btnCadastraEvento.setText("Alterar");
             btnCancelaEvento.setText("Excluir");

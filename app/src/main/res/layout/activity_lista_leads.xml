@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/list_style"
     tools:context="br.dorga.mantuan.leadcaptureintegrado.ListaLeads_">
 
 
@@ -10,8 +11,8 @@
         android:layout_margin="10dp"
         android:text="@string/seleciona_leads"
         android:textAlignment="center"
-        android:textColor="@color/azul_escuro"
-        android:gravity="center"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,7 @@ import org.androidannotations.annotations.ViewById;
 import java.util.List;
 import java.util.Map;
 
+import br.dorga.mantuan.leadcaptureintegrado.MainActivity;
 import br.dorga.mantuan.leadcaptureintegrado.MainActivity_;
 import br.dorga.mantuan.leadcaptureintegrado.R;
 import br.dorga.mantuan.leadcaptureintegrado.br.dorga.mantuan.dao.CidadeDAO;
@@ -51,7 +53,7 @@ public class ListaCidades extends Activity {
                 Intent alteraCidade = new Intent(getApplicationContext(), MainActivity_.class);
                 alteraCidade.putExtra("cidade", cidade);
                 startActivity(alteraCidade);
-               }
+            }
         });
     }
 }

@@ -28,7 +28,7 @@ public abstract class Connection<T> implements DAO<T> {
 
     public Connection(){
         try {
-            database = SQLiteDatabase.openDatabase(SN_PATH + File.separator +  DB_NAME,null,SQLiteDatabase.OPEN_READWRITE);
+            database = SQLiteDatabase.openDatabase(SD_PATH + File.separator +  DB_NAME,null,SQLiteDatabase.OPEN_READWRITE);
         }catch (Exception e){
             e.printStackTrace();
         }

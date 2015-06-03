@@ -2,27 +2,28 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/list_style"
     android:layout_height="match_parent">
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAlignment="center"
-        android:textColor="@color/branco"
+        android:textColor="@color/azul_claro"
         android:id="@+id/p1"
-        android:gravity="center_horizontal"
-        android:layout_margin="4dp"
+        android:gravity="left"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/p2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp" />
 
     <TextView
-        android:layout_margin="3dp"
-        android:textColor="@color/branco"
+        android:layout_margin="1dp"
+        android:textColor="@color/azul_bem_claro"
         android:gravity="left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
